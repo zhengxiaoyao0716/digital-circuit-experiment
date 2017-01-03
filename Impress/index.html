@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Description" content="小学期用FunCode制作ArpgPal的历程。"/>
+    <link rel="shortcut icon" href="http://os.zheng0716.com/static/image/favicon.ico"/>
+    <title>FunCode展示</title>
+    <link href="./static/css/impress-demo.css" rel="stylesheet"/>
+</head>
+<body>    
+    <div class="impress-not-supported">
+        <div class="fallback-message"><p>请搭配<b>现代浏览器</b>食用，口感更加~~~</p></div>
+    </div>
+    <div class="hint">
+        <p>- 计1403 第八组 自动洗衣机系统 -</p>
+    </div>
+    <div id="impress">
+        <div id="bored" class="step slide" data-x="0" data-y="0">
+            计1403 第八组 数电大作业<br />
+            <img src="./static/image/start.jpg"/>
+        </div>
+        <div class="step slide" data-x="-1000" data-y="500" data-rotate="30">
+            <b><u>选题:自动化洗衣机</u><br /></b><br /><br />
+            【需求分析：在一个定时时间内，控制洗衣机自动工作】<br />
+            <p style="color: #33f">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正转10s -> 反转20s -> 暂停10s -> ...-Loop- -><br />
+            -> [扩展流程]用户按下空格键，暂停工作 -><br />
+            -> -Loop-... -> 到达指定时间，停止</p>
+        </div>
+        <div class="step slide" data-x="1000" data-y="500" data-rotate="-30">
+            <b><u>设计：5大模块</u></b><br /><br />
+            <b>1、脉冲发生模块</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用555震荡实现1s周期脉冲，作为全局时钟信号<br /><br />
+            <b>2、用户定时模块</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由用户设定洗涤时间，通过编码器编码为二进制<br /><br />
+            <b>3、效果显示模块</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;永固展示剩余工作时间以及洗衣机当前工作模式<br /><br />
+            <b>4、电源总控模块</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过两个JK边沿触发器，控制洗衣机启动、暂停<br /><br />
+            <b>5、循环驱动模块</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过计数器实现洗衣机三种工作状态的循环转换<br /><br />
+        </div>
+        <div  id="ing" class="step" data-x="0" data-y="1200" data-scale="2">
+            &nbsp;&nbsp;&nbsp;&nbsp;不同<b class="rotating" style="color: #f06">模块</b>
+            分别处理不同功能，最后加以<b class="positioning" style="color: #60f">整合</b>，完成设计要求
+        </div>
+        <div class="step" data-x="0" data-y="2200">
+            <center>
+                成员分工：<br />
+                <span style="color: #339966">姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;负责的方面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;工作量<br /></span>
+                陈正&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设计仿真&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%<br />
+                孙豪&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实验报告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%<br />
+                成泽龙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;理论原理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%<br />
+                斯巴达&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;测试调整&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%<br />
+            </center>
+        </div>
+        <div class="step" data-x="3200" data-y="2200" data-rotate="180">
+            <center><img src="./static/image/preview.jpg"/><center/>
+        </div>
+        <div class="step" data-x="3200" data-y="2200" data-rotate="180" data-rotate-y="180" data-scale="1.5">
+            <center>
+                <b><u>【使用说明】<br /></u></b>
+                qwerty键设置定时十位<br />
+                123456789设置定时个位<br />
+                按下空格键启动|暂停<br />
+            <center/>
+        </div>
+        <div class="step slide" data-x="4200" data-y="1700" data-rotate="210">
+            <center><img src="./static/image/1.jpg"/><center/>
+        </div>
+        <div class="step slide" data-x="2200" data-y="1700" data-rotate="150">
+            <center><img src="./static/image/2.jpg"/><center/>
+        </div>
+        <div class="step" data-x="3200" data-y="1000" data-scale="1.5" data-rotate="180">
+            <center><img src="./static/image/3.jpg"/><center/>
+        </div>
+        <div class="step" data-x="4000" data-y="0" data-scale="2" data-rotate="180" data-rotate-y="-30" style="font-size: 30px;">
+            <center><img src="./static/image/4.jpg"/><center/>
+        </div>
+        <div class="step" data-x="2400" data-y="0" data-scale="2" data-rotate="180" data-rotate-y="-30" style="font-size: 30px;">
+            <center><img src="./static/image/5.jpg"/><center/>
+        </div>
+        <div id="overview" class="step" data-x="1400" data-y="1000" data-scale="4.5"></div>
+    </div>
+    
+    <!--<audio id="impress" src="./static/audio/DieLian.mp3" controls loop autoplay style="position: fixed; left: 0px; top: 0px; margin:10px;">蝶恋.mp3</audio>-->
+    <a id="impress" href="https://github.com/zhengxiaoyao0716/DigitalTechnologyImpress" target="_blank" style="position: fixed; right: 0px; top: 30px; margin:10px;"><img src="http://os.zheng0716.com/static/image/github.svg"/></a>
+    
+    <script src="./static/js/impress.js"></script>
+    <script>impress().init();</script>
+</body>
